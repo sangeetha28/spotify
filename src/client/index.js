@@ -1,5 +1,5 @@
 import ReactDOM from "react-dom";
 import React from "react";
-import Home from "./components/Home";
+import App from "./App";
 
-ReactDOM.hydrate(<Home />, document.querySelector("#root"));
+ReactDOM.hydrate(<App />, document.querySelector("#root"));
