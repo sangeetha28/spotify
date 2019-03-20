@@ -1,0 +1,16 @@
+.topnav {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  background-color: black;
+  align-items: center;
+  height: 60px;
+}
+
+.spotify_logo {
+  width: 100px
+}
+
+.navbar_header {
+  padding-right: 30px;
+}
