@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import SearchBar from "./components/SearchBar";
-import bem from "react-bem-helper";
+
 
 class App extends Component {
   render() {

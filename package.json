@@ -6,13 +6,14 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "npm-run-all --parallel dev:*",
-    "dev:build-client":"webpack --config webpack.client.js --watch",
+    "dev:build-client": "webpack --config webpack.client.js --watch",
     "dev:build-server": "webpack --config webpack.server.js --watch",
     "dev:start": "nodemon --watch build --exec \"node build/bundle.js\""
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.18.0",
     "babel-cli": "6.26.0",
     "babel-core": "6.26.0",
     "babel-loader": "7.1.2",
@@ -34,6 +35,7 @@
     "webpack-merge": "^4.1.0"
   },
   "devDependencies": {
+    "babel-plugin-transform-class-properties": "^6.24.1",
     "webpack-cli": "^3.3.0"
   }
 }

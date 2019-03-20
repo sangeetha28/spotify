@@ -1,9 +1,14 @@
 import { renderToString } from "react-dom/server";
 import App from "../../client/App";
 import React from "react";
+import { Provider } from "react-redux";
 
-export const renderInitialHTML = () => {
-  const content = renderToString(<App/>);
+export const renderInitialHTML = store => {
+  const content = renderToString(
+    <Provider store={store}>
+      <App />
+    </Provider>
+  );
 
   return `<html>
     <head>
