@@ -5,11 +5,18 @@ import { connect } from "react-redux";
 class Search extends Component {
   state = { playlistID: "0pChzR23YPaDmp1ePcdPOK" };
 
+  componentDidMount() {
+    this.props.fetchPlaylist();
+  }
+
   onInputChange(event) {
-    event.key === "Enter" &&
-      this.setState({ playlistID: event.target.value }, () => {
-        this.props.fetchPlaylist(this.state.playlistID);
-      });
+    this.setState({ playlistID: event.target.value });
+  }
+
+  handleKeyPress(event) {
+    if (event.key === "Enter") {
+      this.props.fetchPlaylist(this.state.playlistID);
+    }
   }
 
   render() {
@@ -23,6 +30,7 @@ class Search extends Component {
             placeholder="Playlist ID..."
             value={this.state.value}
             onChange={event => this.onInputChange(event)}
+            onKeyPress={event => this.handleKeyPress(event)}
           />
           <i className="search icon" />
         </div>
@@ -32,7 +40,14 @@ class Search extends Component {
   }
 }
 
-export default connect(
-  null,
-  { fetchPlaylist }
-)(Search);
+function fetchData(store) {
+  return store.dispatch(fetchPlaylist());
+}
+
+export default {
+  component: connect(
+    null,
+    { fetchPlaylist }
+  )(Search),
+  fetchData
+};

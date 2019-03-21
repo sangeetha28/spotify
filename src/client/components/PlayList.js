@@ -1,9 +1,27 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
 
 class PlayList extends Component {
   render() {
-    return <div> I am a PlayList Component</div>;
+    return (
+      <div>
+        <div> Playlist Details </div>
+        {this.props.name && (
+          <div>I am a {this.props.name} PlayList Component</div>
+        )}
+      </div>
+    );
   }
 }
 
-export default PlayList;
+const mapStateToProps = state => {
+  console.log("state is", state);
+  return {
+    name: state.playList && state.playList.name
+  };
+};
+
+export default connect(
+  mapStateToProps,
+  null
+)(PlayList);

@@ -5,12 +5,18 @@ import { Provider } from "react-redux";
 import { createStore, applyMiddleware } from "redux";
 import thunk from "redux-thunk";
 import reducers from "./redux/reducers";
+import { BrowserRouter } from "react-router-dom";
+import { renderRoutes } from "react-router-config";
+import Routes from "../server/Routes";
+import "babel-polyfill";
 
 const store = createStore(reducers, {}, applyMiddleware(thunk));
-
+console.log('store...', store)
 ReactDOM.hydrate(
   <Provider store={store}>
-    <App />
+    <BrowserRouter>
+      <div>{renderRoutes(Routes)}</div>
+    </BrowserRouter>
   </Provider>,
   document.querySelector("#root")
 );

@@ -1,7 +1,7 @@
-export const playList = (state = null, { type, action }) => {
+export const playList = (state = null, { type, payload }) => {
   switch (type) {
-    case "FETCH_PLAYLIST":
-      return action;
+    case "FETCH_PLAYLISTS":
+      return payload;
     default:
       return state;
   }
