@@ -15,7 +15,6 @@ class PlayList extends Component {
 }
 
 const mapStateToProps = state => {
-  console.log("state is", state);
   return {
     name: state.playList && state.playList.name
   };

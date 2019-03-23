@@ -5,9 +5,9 @@ import { connect } from "react-redux";
 class Search extends Component {
   state = { playlistID: "0pChzR23YPaDmp1ePcdPOK" };
 
-  componentDidMount() {
-    this.props.fetchPlaylist();
-  }
+  // componentDidMount() {
+  //   this.props.fetchPlaylist();
+  // }
 
   onInputChange(event) {
     this.setState({ playlistID: event.target.value });
@@ -20,7 +20,6 @@ class Search extends Component {
   }
 
   render() {
-    console.log("State", this.state);
     return (
       <div className="ui search searchbar">
         <div className="ui icon input">

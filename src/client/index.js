@@ -11,7 +11,6 @@ import Routes from "../server/Routes";
 import "babel-polyfill";
 
 const store = createStore(reducers, {}, applyMiddleware(thunk));
-console.log('store...', store)
 ReactDOM.hydrate(
   <Provider store={store}>
     <BrowserRouter>

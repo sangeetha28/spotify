@@ -16,7 +16,7 @@ const store = createStore(reducers, {}, applyMiddleware(thunk));
 
 app.get("/", (req, res) => {
   const promise = matchRoutes(Routes, req.path).map(({ route }) => {
-    route.fetchData ? route.fetchData(store) : null;
+    return route.fetchData ? route.fetchData(store) : null;
   });
 
   Promise.all(promise)
