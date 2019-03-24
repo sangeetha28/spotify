@@ -6,7 +6,8 @@ const SearchBar = SearchBarObj.component;
 class App extends Component {
   render() {
     return (
-      <div>
+      <div className="container">
+      <div className="content">
         <div className="topnav">
           <div className="navbar_header">
             <img
@@ -18,6 +19,8 @@ class App extends Component {
           <SearchBar />
         </div>
         <PlayListItem />
+        </div>
+        <div className="footer"></div>
       </div>
     );
   }

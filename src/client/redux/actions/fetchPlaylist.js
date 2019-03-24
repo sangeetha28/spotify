@@ -32,10 +32,16 @@ export const fetchPlaylist = () => async dispatch => {
     })
     .then(axiosInst => axiosInst.get("/0pChzR23YPaDmp1ePcdPOK"))
     .then(res => {
-      const { name, owner, tracks } = res.data;
+      const { name, owner, tracks, images } = res.data;
       dispatch({
         type: "FETCH_PLAYLISTS",
-        payload: { name, owner: owner.display_name, tracks: tracks.items }
+        payload: {
+          name,
+          owner: owner.display_name,
+          tracks: tracks.items,
+          images,
+          total: tracks.total
+        }
       });
     })
     .catch(err => console.log(err));

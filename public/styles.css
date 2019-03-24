@@ -1,3 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 auto;
+  height: 100vh;
+  align-items: stretch;
+}
+
+.content {
+  flex-grow: 1;
+}
+
 .topnav {
   display: flex;
   justify-content: center;
@@ -7,10 +26,66 @@
   height: 60px;
 }
 
+.footer {
+  background-color: black;
+  padding: 40px;
+  flex-shrink: 0;
+}
+
 .spotify_logo {
   width: 100px
 }
 
 .navbar_header {
   padding-right: 30px;
+}
+
+.playlist-container {
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(to top, #c8bb50 0%, #d1bd4f 10%, #d2be4f 20%, #e6c050 30%, #f4bf60 100%);
+}
+
+.playlist-details {
+  margin-top: 40px;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.playlist-details img {
+  width: 60%
+}
+
+.playlist-items {
+  width: 40%;
+  margin-top: 40px;
+}
+
+.playList-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+}
+
+.artist-details {
+  display: flex;
+}
+
+.track-detail {
+  display: flex;
+  flex-direction: column;
+}
+
+.play-btn {
+  background-color: #1db954;
+  padding: 11px 44px;
+  letter-spacing: .16em;
+  color: #fff;
+  margin-top: 16px margin-bottom: 0;
+  text-align: center;
+  border-radius: 500px;
+  border: 0;
 }
