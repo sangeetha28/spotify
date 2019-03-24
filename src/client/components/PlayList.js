@@ -8,8 +8,8 @@ class PlayList extends Component {
       <div className="playlist-container">
         <div className="playlist-details">
           {this.props.img && <img src={this.props.img} alt="album image" />}
-          {this.props.name && <div>{this.props.name}</div>}
-          {this.props.owner && <div>{this.props.owner}</div>}
+          {this.props.name && <div className="playlist-name">{this.props.name}</div>}
+          {this.props.owner && <div className="playlist-owner">{this.props.owner}</div>}
           <div>
             <button className="play-btn">PLAY</button>{" "}
           </div>
