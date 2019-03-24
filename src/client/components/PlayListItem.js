@@ -1,6 +1,5 @@
 import React from "react";
 
-
 const secondsToMinutesAndSec = time => {
   const minutes = Math.floor(time / 60000);
   const seconds = (time - minutes * 60000).toString().substr(0, 2);
@@ -8,6 +7,7 @@ const secondsToMinutesAndSec = time => {
 };
 
 export const PlayListItem = props =>
+  props.trackItems &&
   props.trackItems.map(item => {
     const trackName = item.track.name;
     const { artists, name } = item.track.album;
@@ -16,7 +16,7 @@ export const PlayListItem = props =>
     const artistNames =
       names.length > 1 ? names.slice(0, -1).join(",") : names.toString();
     return (
-      <div className="playList-item">
+      <div key={item.track.id} className="playList-item">
         <div className="track-details">
           <div>{trackName}</div>
           <div className="artist-details">

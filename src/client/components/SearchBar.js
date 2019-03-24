@@ -2,12 +2,13 @@ import React, { Component } from "react";
 import { fetchPlaylist } from "../redux/actions/fetchPlaylist";
 import { connect } from "react-redux";
 
+const playlistID = "0pChzR23YPaDmp1ePcdPOK";
 class Search extends Component {
   state = { playlistID: "0pChzR23YPaDmp1ePcdPOK" };
 
-  // componentDidMount() {
-  //   this.props.fetchPlaylist();
-  // }
+  componentDidMount() {
+    this.props.fetchPlaylist(this.state.playlistID);
+  }
 
   onInputChange(event) {
     this.setState({ playlistID: event.target.value });
@@ -40,7 +41,7 @@ class Search extends Component {
 }
 
 function fetchData(store) {
-  return store.dispatch(fetchPlaylist());
+  return store.dispatch(fetchPlaylist(playlistID));
 }
 
 export default {

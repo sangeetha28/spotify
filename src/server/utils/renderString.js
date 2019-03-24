@@ -25,6 +25,9 @@ export const renderInitialHTML = (req,store) => {
     <body>
      <div id="root">${content}</div>
     </body>
+    <script>
+    window.INITIAL_DATA = ${JSON.stringify(store.getState())}
+    </script>
     <script src="bundle.js"> </script>
     </html>
     `;
