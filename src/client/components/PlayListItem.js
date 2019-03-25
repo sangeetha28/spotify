@@ -18,7 +18,7 @@ export const PlayListItem = props =>
     return (
       <div key={item.track.id} className="playList-item">
         <div className="track-details">
-          <div>{trackName}</div>
+          <div className="track-name">{trackName}</div>
           <div className="artist-details">
             <span>{artistNames}</span>
             <span className="seperator">.</span>
