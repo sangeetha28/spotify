@@ -32,6 +32,9 @@ body {
   background-color: black;
   padding: 40px;
   margin: auto auto 0 auto;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
 .spotify_logo {
