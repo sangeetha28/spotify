@@ -14,7 +14,7 @@ class PlayList extends Component {
                 src={this.props.img}
                 alt="album image"
               />
-              <div class="overlay">
+              <div className="overlay">
                 <svg
                   className="svg"
                   version="1.1"

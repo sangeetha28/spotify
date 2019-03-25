@@ -6,6 +6,21 @@ const secondsToMinutesAndSec = time => {
   return minutes + ":" + seconds;
 };
 
+const namesLimiter = ({ names, isArtistName }) => {
+  const limiter = isArtistName ? 16 : 45;
+  const newNames = [];
+  if (names.length > limiter) {
+    names.split(" ").reduce((acc, curVal) => {
+      if (acc + curVal.length <= limiter) {
+        newNames.push(curVal);
+      }
+      return acc + curVal.length;
+    }, 0);
+    return newNames.join(" ") + "...";
+  }
+  return names;
+};
+
 export const PlayListItem = props =>
   props.trackItems &&
   props.trackItems.map(item => {
@@ -20,9 +35,11 @@ export const PlayListItem = props =>
         <div className="track-details">
           <div className="track-name">{trackName}</div>
           <div className="artist-details">
-            <span>{artistNames}</span>
+            <span>
+              {namesLimiter({ names: artistNames, isArtistName: true })}
+            </span>
             <span className="seperator">.</span>
-            <span>{name}</span>
+            <span>{namesLimiter({ names: name, isArtistName: false })}</span>
           </div>
         </div>
         <div className="playlist-duration">
