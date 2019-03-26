@@ -21,8 +21,7 @@ const namesLimiter = ({ names, isArtistName }) => {
   return names;
 };
 
-export const PlayListItem = props =>
-  props.trackItems &&
+export const PlayListItem = props => 
   props.trackItems.map(item => {
     const trackName = item.track.name;
     const { artists, name } = item.track.album;

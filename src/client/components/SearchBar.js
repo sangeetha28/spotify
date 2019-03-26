@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 
 const playlistID = "0pChzR23YPaDmp1ePcdPOK";
 class Search extends Component {
-  state = { playlistID: "0pChzR23YPaDmp1ePcdPOK" };
+  state = { playlistID };
 
   componentDidMount() {
     this.props.fetchPlaylist(this.state.playlistID);
@@ -44,10 +44,12 @@ function fetchData(store) {
   return store.dispatch(fetchPlaylist(playlistID));
 }
 
+const mapDispatchToProps = { fetchPlaylist };
+
 export default {
   component: connect(
     null,
-    { fetchPlaylist }
+    mapDispatchToProps
   )(Search),
   fetchData
 };
