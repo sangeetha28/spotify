@@ -80,11 +80,11 @@ body {
 .overlay {
   position: absolute;
   top: 0;
-  left: 113;
+  left: 0;
   bottom: 0;
   right: 0;
   text-align: center;
-  width: 60%;
+  width: 300px;
   opacity: 0;
   transition: .5s ease;
   background-color: black;
@@ -97,7 +97,7 @@ body {
 
 .image-container img {
   cursor: pointer;
-  width: 60%;
+  width: 300px;
   opacity: 1;
 }
 
