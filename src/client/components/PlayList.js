@@ -43,11 +43,11 @@ class PlayList extends Component {
               <PlayListItem trackItems={tracks} />
             </div>
           </When>
-          <Otherwise>
+          {/* <Otherwise>
             <div>
               Unfortnately, Something went wrong... Please come back later!
             </div>
-          </Otherwise>
+          </Otherwise> */}
         </Choose>
       </div>
     );
