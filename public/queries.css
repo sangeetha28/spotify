@@ -1,0 +1,25 @@
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+    .footer {
+        display: none;
+    }
+    .playlist-container {
+        flex-direction: column;
+    }
+    .playlist-items {
+        width: 100%;
+    }
+    .playlist-name {
+        margin: 10px auto;
+        font-size: 23px;
+    }
+    .playlist-details {
+        width: 100%;
+    }
+    .spotify_logo {
+        display: none
+    }
+    .spotify_logo_mobile {
+        width: 40px;
+        display: inline;
+    }
+}

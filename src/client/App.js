@@ -16,6 +16,11 @@ class App extends Component {
                 src="spotify.png"
                 alt="spotify logo"
               />
+              <img
+                className="spotify_logo_mobile"
+                src="spotify-mobile.png"
+                alt="spotify logo"
+              />
             </div>
             <SearchBar />
           </div>

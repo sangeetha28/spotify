@@ -22,6 +22,7 @@ export const renderInitialHTML = (req, store) => {
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="queries.css" />
     
     </head>
     <body>
