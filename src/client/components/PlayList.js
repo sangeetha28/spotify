@@ -2,6 +2,15 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { PlayListItem } from "./PlayListItem";
 import Loader from "./Loader";
+import SpotifyPlayer from "./SpotifyPlayer";
+
+const size = {
+  width: "300px",
+  height: "300px"
+};
+
+const view = "list"; 
+const theme = "black"; 
 
 class PlayList extends Component {
   render() {
@@ -15,8 +24,13 @@ class PlayList extends Component {
           <When condition={tracks && tracks.length > 0}>
             <div className="playlist-details">
               <div className="image-container">
-                <img className="playlist-img" src={img} alt="album image" />
-                <div className="overlay">
+                <SpotifyPlayer
+                  uri='spotify:playlist:0pChzR23YPaDmp1ePcdPOK'
+                  size={size}
+                  view={view}
+                  theme={theme}
+                />
+                {/* /* <div className="overlay">
                   <svg
                     className="svg"
                     version="1.1"
@@ -28,8 +42,8 @@ class PlayList extends Component {
                   >
                     <title>play2</title>
                     <path d="M16 0c-8.837 0-16 7.163-16 16s7.163 16 16 16 16-7.163 16-16-7.163-16-16-16zM16 29c-7.18 0-13-5.82-13-13s5.82-13 13-13 13 5.82 13 13-5.82 13-13 13zM12 9l12 7-12 7z" />
-                  </svg>
-                </div>
+                  </svg> 
+                </div> */}
               </div>
 
               <div className="playlist-name">{name}</div>

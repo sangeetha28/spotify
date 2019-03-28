@@ -11,6 +11,10 @@ body {
   min-height: 100vh;
 }
 
+.SpotifyPlayer {
+  margin-right: 20px;
+}
+
 .container {
   width: 100%;
   margin: 0 auto;
@@ -81,7 +85,7 @@ body {
   justify-content: flex-start;
 }
 
-.overlay {
+/* .overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -92,7 +96,7 @@ body {
   opacity: 0;
   transition: .5s ease;
   background-color: black;
-}
+} */
 
 .image-container {
   position: relative;
@@ -146,7 +150,7 @@ body {
   transform: translateY(-2px);
 }
 
-.playList-item::before {
+/* .playList-item::before {
   display: block;
   content: ' ';
   background-image: url('icons8-musical-notes-24.png');
@@ -155,11 +159,11 @@ body {
   width: 14px;
   margin-right: 15px;
   margin-top: 5px;
-}
+} */
 
-.playList-item:hover::before {
+/* .playList-item:hover::before {
   background-image: url('icons8-play-26.png');
-}
+} */
 
 .playlist-duration {}
 
