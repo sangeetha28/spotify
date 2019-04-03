@@ -3,7 +3,7 @@ import { fetchPlaylist } from "../redux/actions/fetchPlaylist";
 import { connect } from "react-redux";
 
 const playlistID = "0pChzR23YPaDmp1ePcdPOK";
-class Search extends Component {
+export class Search extends Component {
   state = { playlistID };
 
   componentDidMount() {
