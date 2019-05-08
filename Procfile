@@ -1,3 +1,3 @@
 // Procfile
 
-web: npm-run-all --parallel dev:*
+web: node server.js
